@@ -5,13 +5,13 @@ import {
     View,
     Text,
     ActivityIndicator,
-    StyleSheet,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { COLORS, FONT, SIZES } from "../../constants";
-import DailyMeditation from "../../components/DailyMeditation";
+import DailyMeditation from "../DailyMeditation/DailyMeditation";
 import { useFocusEffect } from "expo-router";
-import ScreenHeaderBtn from '../../components/ScreenHeaderBtn'
+import ScreenHeaderBtn from "../ScreenHeaderBtn/ScreenHeaderBtn";
+import styles from "./Favourites.style";
 
 const Favourites = () => {
 
@@ -37,7 +37,7 @@ const Favourites = () => {
     );
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.darkBackground }}>
+        <SafeAreaView style={styles.safeAreaContainer}>
             <ScreenHeaderBtn />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.container}>
@@ -47,7 +47,7 @@ const Favourites = () => {
                         <Text style={styles.headerTitle}>No favorite items found.</Text>
                     ) : (
                         <>
-                            <Text style={{ textAlign: "center", color: "#FF4500", fontWeight: "bold" }}>My Favourite Exercises</Text>
+                            <Text style={styles.sectionTitle}>My Favourite Exercises</Text>
                             <DailyMeditation meditations={favorites} />
                         </>
                     )}
@@ -56,19 +56,5 @@ const Favourites = () => {
         </SafeAreaView>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        marginTop: SIZES.xLarge,
-        padding: SIZES.medium,
-    },
-    headerTitle: {
-        fontSize: SIZES.large,
-        fontFamily: FONT.medium,
-        color: COLORS.primary,
-        textAlign: "center",
-        marginTop: 20,
-    },
-});
 
 export default Favourites;

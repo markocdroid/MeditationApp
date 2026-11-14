@@ -17,7 +17,7 @@ import {
     Footer,
     Tabs,
 } from "../../components";
-import ScreenHeaderBtn from '../../components/ScreenHeaderBtn';
+import ScreenHeaderBtn from '../../components/ScreenHeaderBtn/ScreenHeaderBtn';
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
 

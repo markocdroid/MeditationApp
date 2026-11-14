@@ -1,8 +1,8 @@
-import { Image, TouchableOpacity, StyleSheet } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { View } from "react-native"; 
-import { COLORS, SIZES } from "../constants/theme";
-import icons from "../constants/icons";
+import icons from "../../constants/icons";
 import { useRouter } from "expo-router";
+import styles from "./ScreenHeaderBtn.style";
 
 const ScreenHeaderBtn = ({ detailPage, handleShare }) => {
     console.log(detailPage);
@@ -31,31 +31,6 @@ const ScreenHeaderBtn = ({ detailPage, handleShare }) => {
         </>
     );
 };
-
-
-const styles = StyleSheet.create({
-    btn: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 10,
-        width: '100vw',
-    },
-    image: {
-        width: 30,
-        height: 30,
-        resizeMode: 'contain',
-    },
-    btnContainer: {
-        width: 40,
-        height: 40,
-        backgroundColor: COLORS.white,
-        borderRadius: SIZES.small / 1.25,
-        justifyContent: "center",
-        alignItems: "center",
-        marginHorizontal: 5,
-    },
-});
 
 
 export default ScreenHeaderBtn;

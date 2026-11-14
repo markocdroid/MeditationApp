@@ -4,10 +4,8 @@ import { default as About } from "./about/About";
 import { default as Footer } from "./footer/Footer";
 
 export {
-
     MeditationTopDisplay,
     Tabs,
     About,
     Footer,
-
 };

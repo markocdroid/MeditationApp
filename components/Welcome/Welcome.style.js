@@ -1,22 +1,5 @@
-import {
-    View,
-    Text, StyleSheet
-} from "react-native";
-import { COLORS, FONT, SIZES } from "../constants/theme";
-
-const Welcome = ({ userDetails }) => {
-    console.log("userDetails", userDetails?.userName);
-    return (
-        <>
-            <View>
-                <View style={styles.container} testID="styles.container">
-                    <Text style={styles.userName}>Hello {userDetails?.userName}!</Text>
-                    <Text style={styles.welcomeMessage}>Find your perfect meditation</Text>
-                </View>
-            </View>
-        </>
-    );
-};
+import { StyleSheet } from "react-native";
+import { COLORS, FONT, SIZES } from "../../constants/theme";
 
 const styles = StyleSheet.create({
     container: {
@@ -71,6 +54,7 @@ const styles = StyleSheet.create({
     tabsContainer: {
         width: "100%",
         marginTop: SIZES.medium,
-    }
+    },
 });
-export default Welcome;
+
+export default styles;
