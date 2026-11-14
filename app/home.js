@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SafeAreaView, ScrollView, View } from "react-native";
+import DailyQuote from "../components/DailyQuote";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { COLORS, SIZES } from "../constants/theme";
 import ScreenHeaderBtn from "../components/ScreenHeaderBtn";
@@ -33,6 +34,7 @@ const Home = () => {
                         testID="screensDisplay"
                     >
                         <Welcome userDetails={userDetails ? JSON.parse(userDetails) : null} />
+                        <DailyQuote />
                         <PopularMeditation />
                         <DailyMeditation />
 
