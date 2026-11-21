@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Image, SafeAreaView, Text, View } from "react-native";
-import { COLORS, FONT, icons, SHADOWS, SIZES } from "../constants";
+import { COLORS, FONT, icons, SHADOWS, SIZES } from "../../constants";
 import { useRouter } from "expo-router";
 import { ScrollView } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import ScreenHeaderBtn from "../components/ScreenHeaderBtn/ScreenHeaderBtn"
+import ScreenHeaderBtn from "../../components/ScreenHeaderBtn/ScreenHeaderBtn"
 import { TouchableOpacity } from "react-native";
 
 const Settings = () => {

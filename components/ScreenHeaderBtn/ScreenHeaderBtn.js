@@ -1,5 +1,5 @@
 import { Image, TouchableOpacity } from "react-native";
-import { View } from "react-native"; 
+import { View } from "react-native";
 import icons from "../../constants/icons";
 import { useRouter } from "expo-router";
 import styles from "./ScreenHeaderBtn.style";
@@ -22,7 +22,7 @@ const ScreenHeaderBtn = ({ detailPage, handleShare }) => {
                     </>
                     :
                     <>
-                        <TouchableOpacity style={styles.btnContainer} onPress={() => router.push("/settings")}>
+                        <TouchableOpacity style={styles.btnContainer} onPress={() => router.push("/settings/settings")}>
                             <Image source={icons.settings} style={styles.image} />
                         </TouchableOpacity>
                     </>

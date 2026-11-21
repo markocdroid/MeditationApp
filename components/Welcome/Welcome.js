@@ -1,21 +1,28 @@
-import {
-    View,
-    Text
-} from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { COLORS, FONT, SIZES } from "../../constants/theme";
 import styles from "./Welcome.style";
 
-const Welcome = ({ userDetails }) => {
-    console.log("userDetails", userDetails?.userName);
-    return (
-        <>
-            <View>
-                <View style={styles.container} testID="styles.container">
-                    <Text style={styles.userName}>Hello {userDetails?.userName}!</Text>
-                    <Text style={styles.welcomeMessage}>Find your perfect meditation</Text>
-                </View>
-            </View>
-        </>
-    );
+const getThemeStyles = (isDark) => ({
+  userName: {
+    color: isDark ? COLORS.lightWhite : COLORS.darkText,
+  },
+  welcomeMessage: {
+    color: isDark ? COLORS.lightText : COLORS.darkText,
+  }
+});
+const Welcome = ({ userDetails, isDark }) => {
+  const themeStyles = getThemeStyles(isDark);
+  return (
+    <View>
+      <View style={[styles.container]}>
+        <Text style={[styles.userName, themeStyles.userName]}>
+          Hello {userDetails?.userName}!
+        </Text>
+        <Text style={[styles.welcomeMessage, themeStyles.welcomeMessage]}>
+          Find your perfect meditation
+        </Text>
+      </View>
+    </View>
+  );
 };
-
 export default Welcome;
