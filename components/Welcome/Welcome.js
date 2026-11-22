@@ -7,10 +7,11 @@ const getThemeStyles = (isDark) => ({
     color: isDark ? COLORS.lightWhite : COLORS.darkText,
   },
   welcomeMessage: {
-    color: isDark ? COLORS.lightText : COLORS.darkText,
+    color: isDark ? COLORS.lightWhite : COLORS.darkText,
   }
 });
-const Welcome = ({ userDetails, isDark }) => {
+const Welcome = ({ userDetails, isDarkMode: isDark }) => {
+
   const themeStyles = getThemeStyles(isDark);
   return (
     <View>
