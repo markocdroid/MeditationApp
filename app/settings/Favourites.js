@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { COLORS, FONT, SIZES } from "../../constants";
-import DailyMeditation from "../DailyMeditation/DailyMeditation";
+import DailyMeditation from "../../components/DailyMeditation/DailyMeditation";
 import { useFocusEffect } from "expo-router";
-import ScreenHeaderBtn from "../ScreenHeaderBtn/ScreenHeaderBtn";
+import ScreenHeaderBtn from "../../components/ScreenHeaderBtn/ScreenHeaderBtn";
 import styles from "./Favourites.style";
 
 const Favourites = () => {

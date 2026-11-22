@@ -4,7 +4,7 @@ import { COLORS, FONT, SIZES } from "../../constants";
 const styles = StyleSheet.create({
     safeAreaContainer: {
         flex: 1,
-        backgroundColor: COLORS.darkBackground,
+        backgroundColor: COLORS.backgroundColor,
     },
     container: {
         marginTop: SIZES.xLarge,
